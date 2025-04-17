@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head><title>Yosh - Jadidlar</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'vendor/css/main.css' %}">
+</head>
+<body class="subpage">
+
+<!-- Header -->
+<header id="header">
+    <div class="logo"><a href="{% url 'aplication:home' %}">Yosh Jadidlar</a></div>
+    <a href="#menu">Menu</a>
+</header><!-- Nav -->
+<nav id="menu">
+    <ul class="links">
+        <li><a href="{% url 'aplication:home' %}">Home</a></li>
+        <li><a href="{% url 'aplication:about' %}">About</a></li>
+        <li><a href="{% url 'aplication:ilmiy' %}">Ilmiy jurnal</a></li>
+        <!--        <li><a href="{% url 'aplication:generic' %}">Generic</a></li>-->
+    </ul>
+</nav><!-- One -->
+<section id="One" class="wrapper style3">
+    <div class="inner">
+        <header class="align-center"><p>Bu yerda siz e'lonni to'liq uqishingiz mumkin</p>
+            <h2>{{ forum.title }}</h2>
+        </header>
+    </div>
+</section><!-- Two -->
+<section id="two" class="wrapper style2">
+    <div class="inner">
+        <div class="box">
+            <div class="content">
+                <div class="image fit">
+                    <img src="{{ forum.image.url }}" alt="" width="600" height="300">
+                </div>
+                <header class="" STYLE="padding-top: 50px">
+                    <h2>{{ forum.title }}</h2>
+                </header>
+                <p>{{ forum.description }} <a href="{{ forum.tg_username }}">Telegram</a></p>
+            </div>
+        </div>
+    </div>
+</section><!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <ul class="">
+            <li style="list-style-type: none">Manzil: Jizzax Davlat Pedagogika Universiteti</li>
+            <li style="list-style-type: none">Telefon: +998 884470312</li>
+            <li style="list-style-type: none">E-Manzil: yoshjadidlartadqiqotmarkazi@gmail.com</li>
+        </ul>
+        <ul class="icons">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/yosh_jadidlar_/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+        </ul>
+    </div>
+</footer>
+<div class="copyright">
+    "Yosh Jadidlar" ilmiy tadqiqot markazi
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'vendor/js/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/js/jquery.scrollex.min.js' %}"></script>
+<script src="{% static 'vendor/js/skel.min.js' %}"></script>
+<script src="{% static 'vendor/js/util.js' %}"></script>
+<script src="{% static 'vendor/js/main.js' %}"></script>
+</body>
+</html>

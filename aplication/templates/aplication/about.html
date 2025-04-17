@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head><title>Yosh - Jadidlar</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'vendor/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="{% static 'vendor/images/logo.jpg' %}">
+</head>
+<body class="subpage">
+
+<!-- Header -->
+<header id="header">
+    <div class="logo"><a href="{% url 'aplication:home' %}">Yosh Jadidlar </a><i class="fa-brands fa-pied-piper-hat"
+                                                                                 style="color: #ffffff;"></i></div>
+    <a href="#menu">Menu</a>
+</header><!-- Nav -->
+<nav id="menu">
+    <ul class="links">
+        <li><a href="{% url 'aplication:home' %}">Home</a></li>
+        <li><a href="{% url 'aplication:about' %}">About</a></li>
+        <li><a href="{% url 'aplication:ilmiy' %}">Ilmiy jurnal</a></li>
+        <!--        <li><a href="{% url 'aplication:generic' %}">Generic</a></li>-->
+    </ul>
+</nav><!-- One -->
+<section id="One" class="wrapper style3">
+    <div class="inner">
+        <header class="align-center"><p>Xush kelibsiz</p>
+            <h2>Tashkilot haqida to'liq ma'lumot</h2>
+        </header>
+    </div>
+</section><!-- Two -->
+<section id="two" class="wrapper style2">
+    <div class="inner">
+        <div class="box">
+            <div class="content">
+                <header class="align-center">
+                    <h2>"Yosh Jadidlar" ilmiy tadqiqot markazi</h2>
+                </header>
+                <h1>Biz haqimizda</h1>
+                <p>“Yosh Jadidlar” ilmiy tadqiqot markazi — bu ijtimoiy va gumanitar fanlar, ekologiya, innovatsiyalar
+                    va yoshlarning intellektual rivojlanishiga qaratilgan faoliyat yurituvchi nodavlat tashkilotdir.
+                    Markaz 2025-yilda Jizzax viloyatida ro‘yxatdan o‘tgan bo‘lib, ilmiy tadqiqotlar, xalqaro loyihalar,
+                    nashriyotchilik faoliyati va ta’limiy dasturlar orqali ilm-fan va jamiyat rivojiga hissa qo‘shadi.
+                    Markaz o‘z faoliyatida:
+                    yosh tadqiqotchilarni qo‘llab-quvvatlash,
+                    innovatsion va barqaror rivojlanish loyihalarini amalga oshirish,
+                    mahalliy va xalqaro hamkorlikni yo‘lga qo‘yish,
+                    hamda ekologik ongni rivojlantirishni ustuvor deb biladi.
+                    “Yosh Jadidlar” — bu fikrlaydigan, izlanadigan va o‘zgarishga intiladigan avlodni birlashtiruvchi
+                    ilmiy hamjamiyatdir.</p>
+                <h1>Faoliyat yoʻnalishlari</h1>
+                <p>“Yosh Jadidlar” keng qamrovli, xalqaro miqyosda rivojlanishga yo‘naltirilgan quyidagi yo‘nalishlarda
+                    faoliyat olib boradi:
+                    Ilmiy tadqiqotlar: Fundamental va amaliy tadqiqotlar, grantlar asosidagi ilmiy ishlanmalar, barqaror
+                    rivojlanish va ekologik mavzular bo‘yicha izlanishlar.
+                    Ta’limiy va ma’rifiy dasturlar: Talabalar, yosh olimlar va ijodkorlar uchun seminarlar, vebinarlar,
+                    treninglar, stajirovkalar, master-klasslar tashkil etish.
+                    Innovatsion loyihalar: Ijtimoiy, madaniy va texnologik sohalarda yangiliklar kirituvchi loyihalarni
+                    ishlab chiqish va sinovdan o‘tkazish.
+                    Nashr va axborot: Ilmiy maqolalar, to‘plamlar, davriy jurnallar, metodik qo‘llanmalar va yangiliklar
+                    byulletenlarini chop etish.
+                    Xalqaro hamkorlik: Universitetlar, ilmiy markazlar va NNTlar bilan qo‘shma loyihalar, ilmiy
+                    almashinuv dasturlari va hamkorlik memorandumlarga asoslangan faoliyat.
+                    Ekologik tashabbuslar: Yashil makonlar yaratish, atrof-muhitni muhofaza qilish, ekologik ongni
+                    targ‘ib qilishga qaratilgan tadbirlar.</p>
+                <h1>A’zolik</h1>
+                <p>“Yosh Jadidlar” ilmiy tadqiqot markazi — bilimli, faol va tashabbuskor yoshlarni birlashtiruvchi
+                    hamjamiyat. A’zo bo‘lish orqali siz o‘z ilmiy salohiyatingizni rivojlantirish, tajriba almashish va
+                    xalqaro loyihalarda ishtirok etish imkoniyatiga ega bo‘lasiz.
+                    A’zolarga quyidagilar taqdim etiladi:
+                    Rasman tasdiqlangan guvohnoma va ko‘krak nishoni
+                    Forumlar, tanlovlar va konferensiyalarda maxsus chegirmalar
+                    Ilmiy rahbarlik va mentorlik imkoniyatlari
+                    Yutuqlar e’tirofi — sertifikatlar, diplomlar, rasmiy sahifada tan olish
+                    Ilmiy ishlar bo‘yicha amaliy va nazariy ko‘rsatmalar
+                    Yosh olimlar jamoasiga qo‘shiling — sizni ilhomlantiruvchi tajriba, bilim va imkoniyatlar
+                    kutmoqda!</p>
+                <h1>Hamkorlik</h1>
+                <p>“Yosh Jadidlar” ilmiy tadqiqot markazi ochiq, faol va natijador hamkorlik tarafdoridir. Biz mahalliy
+                    va xalqaro miqyosdagi universitetlar, ilmiy markazlar, nodavlat tashkilotlar, nashriyotlar va
+                    ekotashabbuslar bilan qo‘shma loyihalar olib boramiz.
+                    Hamkorlik yo‘nalishlari:
+                    Ilmiy va innovatsion tadqiqotlar;
+                    Xalqaro konferensiyalar, forumlar va seminarlar;
+                    Yosh olimlar almashinuvi va stajirovka dasturlari;
+                    Qo‘shma nashrlar va ilmiy to‘plamlar tayyorlash;
+                    Ekologik va ijtimoiy barqarorlik tashabbuslari.
+                    Siz bilan hamkorlik qilishdan mamnun bo‘lamiz! Takliflar uchun biz bilan bog‘laning — birgalikda
+                    ijobiy o‘zgarishlar yarataylik.</p>
+                <h1>Nashrlar</h1>
+                <p>“Yosh Jadidlar” ilmiy tadqiqot markazi yosh tadqiqotchilar va olimlarning ilmiy ishlari,
+                    nazariy-amaliy maqolalari va ijodiy izlanishlarini keng jamoatchilikka yetkazish uchun faol
+                    nashriyot faoliyatini olib boradi.
+                    Asosiy nashr yo‘nalishlarimiz:
+                    Ilmiy maqolalar to‘plamlari (PDF/print shaklida)
+                    Elektron va bosma jurnallar
+                    Metodik qo‘llanmalar va ma’lumotnomalar
+                    Konferensiya materiallari
+                    Yosh tadqiqotchilar rukni
+                    Maqolalaringizni yuboring, o‘z ismingizni ilm-fan sahnasida e’tirof eting!
+                    Har bir nashr Google’da indekslanadi va ishtirokchilarga rasmiy sertifikatlar taqdim etiladi.</p>
+            </div>
+        </div>
+    </div>
+</section><!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <ul class="">
+            <li style="list-style-type: none">Manzil: Jizzax Davlat Pedagogika Universiteti</li>
+            <li style="list-style-type: none">Telefon: +998 884470312</li>
+            <li style="list-style-type: none">E-Manzil: yoshjadidlartadqiqotmarkazi@gmail.com</li>
+        </ul>
+        <ul class="icons">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/yosh_jadidlar_/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+        </ul>
+    </div>
+</footer>
+<div class="copyright">
+    "Yosh Jadidlar" ilmiy tadqiqot markazi
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'vendor/js/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/js/jquery.scrollex.min.js' %}"></script>
+<script src="{% static 'vendor/js/skel.min.js' %}"></script>
+<script src="{% static 'vendor/js/util.js' %}"></script>
+<script src="{% static 'vendor/js/main.js' %}"></script>
+</body>
+</html>
