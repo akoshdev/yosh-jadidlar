@@ -1,64 +1,67 @@
 {% load static %}
 <!DOCTYPE HTML>
 <html>
-<head><title>Hielo by TEMPLATED</title>
+<head><title>Yosh - Jadidlar</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'vendor/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="{% static 'vendor/images/logo.jpg' %}">
 </head>
 <body>
 
 <!-- Header -->
 <header id="header" class="alt">
-    <div class="logo"><a href="index.html">Hielo <span>by TEMPLATED</span></a></div>
+    <div class="logo"><a href="index.html">Yosh Jadidlar </a><i class="fa-brands fa-pied-piper-hat" style="color: #ffffff;"></i></div>
     <a href="#menu">Menu</a>
 </header><!-- Nav -->
 <nav id="menu">
     <ul class="links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="generic.html">Generic</a></li>
-        <li><a href="elements.html">Elements</a></li>
+        <li><a href="{% url 'aplication:home' %}">Home</a></li>
+        <li><a href="{% url 'aplication:generic' %}">Generic</a></li>
+<!--        <li><a href="elements.html">Elements</a></li>-->
     </ul>
 </nav><!-- Banner -->
 <section class="banner full">
-    <article><img src="{% static 'vendor/images/slide01.jpg' %}" alt="" width="1440" height="961">
+    <article><img src="{% static 'vendor/images/cholpon.jpeg' %}" alt="" width="1440" height="961">
         <div class="inner">
-            <header><p>A free responsive web site template by <a href="https://templated.co">TEMPLATED</a></p>
-                <h2>Hielo</h2>
+            <header><p><a href="">Adabiyot yashasa - millat yashar.</a></p>
+                <h2>Abdulhamid Cho'lpon</h2>
             </header>
         </div>
     </article>
-    <article><img src="{% static 'vendor/images/slide02.jpg' %}" alt="" width="1440" height="961">
+    <article><img src="{% static 'vendor/images/aavloniy.jpeg' %}" alt="" width="1440" height="961">
         <div class="inner">
-            <header><p>Lorem ipsum dolor sit amet nullam feugiat</p>
-                <h2>Magna</h2>
+            <header><p><a href="">Ilm insonlarning madori hayoti, rahbari, najotidur.</a></p>
+                <h2>Abdulla Avloniy</h2>
             </header>
         </div>
     </article>
-    <article><img src="{% static 'vendor/images/slide03.jpg' %}" alt="" width="1440" height="962">
+    <article><img src="{% static 'vendor/images/ayniy.jpeg' %}" alt="" width="1440" height="962">
         <div class="inner">
-            <header><p>Sed cursus aliuam veroeros lorem ipsum nullam</p>
-                <h2>Tempus</h2>
+            <header><p><a href="">Har millat o‘z tili ila faxr etar.</a></p>
+                <h2>Sadriddin Ayniy</h2>
             </header>
         </div>
     </article>
-    <article><img src="{% static 'vendor/images/slide04.jpg' %}" alt="" width="1440" height="961">
+    <article><img src="{% static 'vendor/images/fitrat.jpeg' %}" alt="" width="1440" height="961">
         <div class="inner">
-            <header><p>Adipiscing lorem ipsum feugiat sed phasellus consequat</p>
-                <h2>Etiam</h2>
+            <header><p><a href="">Har bir millat taraqqiysi uchun asosiy sabab ilmdir.</a></p>
+                <h2>Abdurauf Firat</h2>
             </header>
         </div>
     </article>
-    <article><img src="{% static 'vendor/images/slide05.jpg' %}" alt="" width="1440" height="962">
+    <article><img src="{% static 'vendor/images/behbudiy.jpeg' %}" alt="" width="1440" height="962">
         <div class="inner">
-            <header><p>Ipsum dolor sed magna veroeros lorem ipsum</p>
-                <h2>Adipiscing</h2>
+            <header><p><a href="">Haq olinur, berilmas!</a></p>
+                <h2>Mahmudxo'ja Behbudiy</h2>
             </header>
         </div>
     </article>
 </section><!-- One -->
 <section id="one" class="wrapper style2">
+    <h2 class="align-center" style="padding-bottom: 40px; font-weight: 500; font-size: 50px;">Forumlar</h2>
     <div class="inner">
         <div class="grid-style">
 
@@ -116,6 +119,10 @@
             <div>
                 <div class="image fit">
                     <a href="#"><img src="{% static 'vendor/images/pic01.jpg' %}" alt="" width="600" height="300"></a>
+                    <h2 style="padding-top: 10px">Bugungi yangiligimiz!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, reiciendis.</p>
+                    <footer class="align-center"><a href="#" class="button alt">Learn More</a>
+                        </footer>
                 </div>
             </div>
             <div>

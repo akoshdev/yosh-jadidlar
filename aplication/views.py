@@ -4,3 +4,7 @@ from django.views.generic.base import TemplateView
 class IndexView(TemplateView):
     template_name = 'aplication/index.html'
     title = 'Yosh'
+
+class GenericView(TemplateView):
+    template_name = 'aplication/generic.html'
+    title = 'Yosh'
