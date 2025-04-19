@@ -7,7 +7,7 @@ urlpatterns = [
     path('', forums, name='home'),
     path('generic/', GenericView.as_view(), name='generic'),
     path('about/', AboutView.as_view(), name='about'),
-    path('ilmiy-jurnal/', ScientificView.as_view(), name='ilmiy'),
+    path('index.php.ilmiy-jurnal/', ScientificView.as_view(), name='ilmiy'),
     path('forum/<int:id>/', forum_detail, name='forum-detail'),
     path('new/<int:id>/', news_detail, name='new-detail'),
 ]
