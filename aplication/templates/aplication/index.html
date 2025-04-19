@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{% static 'vendor/css/main.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="icon" href="{% static 'vendor/images/logo.jpg' %}">
+
 </head>
 <body>
-
 <!-- Header -->
 <header id="header" class="alt">
     <div class="logo"><a href="{% url 'aplication:home' %}">Yosh Jadidlar </a><i class="fa-brands fa-pied-piper-hat"
@@ -21,7 +21,7 @@
     <ul class="links">
         <li><a href="{% url 'aplication:home' %}">Asosiy Sahifa</a></li>
         <li><a href="{% url 'aplication:about' %}">Haqida</a></li>
-        <li><a href="{% url 'aplication:ilmiy' %}">Nashriyoy</a></li>
+        <li><a href="{% url 'aplication:public' %}">Ilmiy Jurnal</a></li>
 <!--        <li><a href="{% url 'aplication:generic' %}">Generic</a></li>-->
 
     </ul>
@@ -71,35 +71,20 @@
                 <div>
                     <div class="box">
                         <div class="image fit">
-                            <img src="{{ forum.image.url }}" alt="" width="600" height="300"></div>
+                            <img src="{{ forum.image.url }}" alt="" class="card-img-top" style=" width: 100%;
+            height: 380px;
+            object-fit: cover;
+            margin-bottom: 15px;"></div>
                         <div class="content">
-                            <!--                        <header class="align-center"><p>maecenas sapien feugiat ex purus</p>-->
                             <h2>{{ forum.title }}</h2>
                             </header>
                             <p>{{ forum.min_desc }}.</p>
-                            <footer class="align-center"><a href="{% url 'aplication:forum-detail' forum.id %}" class="button alt">Learn More</a>
+                            <footer class="align-center"><a href="{% url 'aplication:forum-detail' forum.id %}" class="button alt">Batafsil</a>
                             </footer>
                         </div>
                     </div>
                 </div>
             {% endfor %}
-<!--            <div>-->
-<!--                <div class="box">-->
-<!--                    <div class="image fit">-->
-<!--                        <img src="{% static 'vendor/images/pic03.jpg' %}" alt="" width="600" height="300"></div>-->
-<!--                    <div class="content">-->
-<!--                        <header class="align-center"><p>mattis elementum sapien pretium tellus</p>-->
-<!--                            <h2>Vestibulum sit amet</h2>-->
-<!--                        </header>-->
-<!--                        <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet-->
-<!--                            tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus,-->
-<!--                            quis volutpat lacus placerat malesuada.</p>-->
-<!--                        <footer class="align-center"><a href="#" class="button alt">Learn More</a>-->
-<!--                        </footer>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
         </div>
     </div>
 </section><!-- Two -->
@@ -123,29 +108,17 @@
         {% for new in news %}
             <div>
                 <div class="image fit">
-                    <a href="#"><img src="{{ new.image.url }}" alt="" width="600" height="300"></a>
+                    <a href="{% url 'aplication:new-detail' new.id %}"><img src="{{ new.image.url }}" alt="" class="image-islom" style=" width: 100%;
+            height: 380px;
+            object-fit: cover;
+            margin-bottom: 15px;"></a>
                     <h2 style="padding-top: 10px">{{ new.title }}</h2>
                     <p>{{ new.min_desc }}</p>
-                    <footer class="align-center"><a href="{% url 'aplication:new-detail' new.id %}" class="button alt">Learn More</a>
+                    <footer class="align-center"><a href="{% url 'aplication:new-detail' new.id %}" class="button alt">Batafsil</a>
                     </footer>
                 </div>
             </div>
         {% endfor %}
-<!--            <div>-->
-<!--                <div class="image fit">-->
-<!--                    <a href="#"><img src="{% static 'vendor/images/pic02.jpg' %}" alt="" width="600" height="300"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <div class="image fit">-->
-<!--                    <a href="#"><img src="{% static 'vendor/images/pic03.jpg' %}" alt="" width="600" height="300"></a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <div class="image fit">-->
-<!--                    <a href="#"><img src="{% static 'vendor/images/pic04.jpg' %}" alt="" width="600" height="300"></a>-->
-<!--                </div>-->
-<!--            </div>-->
         </div>
     </div>
 </section><!-- Footer -->

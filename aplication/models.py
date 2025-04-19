@@ -30,3 +30,20 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+class Publisher(models.Model):
+    image = models.ImageField(upload_to='main_images', verbose_name='Rasm tanlang', blank=True)
+    title = models.CharField(max_length=255, verbose_name='Nomini kiriting')
+    annotatsiya = models.TextField(verbose_name="Annotatsiya")
+    keywords = models.TextField(verbose_name="Kalit so'zlar")
+    abstract = models.TextField(verbose_name="Abstarct")
+    keywords2 = models.TextField(verbose_name="Keywords")
+    description = models.TextField(verbose_name="To'liq ma'zmunini kiriting")
+    source = models.TextField(verbose_name="Foydalanilgan adabiyotlar", blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Nashriyot'
+        verbose_name_plural = 'Nashriyotlar'
+
+    def __str__(self):
+        return self.title

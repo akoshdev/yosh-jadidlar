@@ -1,5 +1,5 @@
 from django.urls import path
-from aplication.views import GenericView, AboutView, forums, forum_detail, news_detail, ScientificView
+from aplication.views import GenericView, AboutView, forums, forum_detail, news_detail, public, public_detail
 app_name = 'aplication'
 
 
@@ -7,7 +7,8 @@ urlpatterns = [
     path('', forums, name='home'),
     path('generic/', GenericView.as_view(), name='generic'),
     path('about/', AboutView.as_view(), name='about'),
-    path('index.php.ilmiy-jurnal/', ScientificView.as_view(), name='ilmiy'),
+    path('ilmiy-jurnal/', public, name='public'),
+    path('index.php.ilmiy-jurnal/<int:id>/', public_detail, name='public-detail'),
     path('forum/<int:id>/', forum_detail, name='forum-detail'),
     path('new/<int:id>/', news_detail, name='new-detail'),
 ]

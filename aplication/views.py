@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from aplication.models import Forums, News
+from aplication.models import Forums, News, Publisher
 # Create your views here.
 # class IndexView(TemplateView):
 #     template_name = 'aplication/index.html'
@@ -14,9 +14,24 @@ class AboutView(TemplateView):
     template_name = 'aplication/about.html'
     title = 'Yosh'
 
-class ScientificView(TemplateView):
-    template_name = 'aplication/ilmiy-jurnal.html'
-    title = 'Yosh'
+# class ScientificView(TemplateView):
+#     template_name = 'aplication/ilmiy-jurnal.html'
+#     title = 'Yosh'
+
+
+def public(request):
+    publics = Publisher.objects.all()
+    context = {
+        'publics': publics,
+    }
+    return render(request, 'aplication/ilmiy-jurnallar.html', context)
+
+def public_detail(request, id):
+    public = Publisher.objects.get(id=id)
+    context = {
+        'public': public,
+    }
+    return render(request, 'aplication/ilmiy-jurnal.html', context)
 
 
 def forums(request, category_id=None):
