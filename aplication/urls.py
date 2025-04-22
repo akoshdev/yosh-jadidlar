@@ -1,12 +1,13 @@
 from django.urls import path
-from aplication.views import GenericView, AboutView, forums, forum_detail, news_detail, public, public_detail
+from aplication.views import GenericView, AboutView, forums, forum_detail, news_detail, public, public_detail,nashriyot
 app_name = 'aplication'
 
 
 urlpatterns = [
     path('', forums, name='home'),
     path('generic/', GenericView.as_view(), name='generic'),
-    path('about/', AboutView.as_view(), name='about'),
+    path('haqida/', AboutView.as_view(), name='about'),
+    path('nashriyot/', nashriyot, name='nashriyot'),
     path('ilmiy-jurnal/', public, name='public'),
     path('index.php.ilmiy-jurnal/<int:id>/', public_detail, name='public-detail'),
     path('forum/<int:id>/', forum_detail, name='forum-detail'),

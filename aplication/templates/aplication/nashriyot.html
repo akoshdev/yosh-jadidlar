@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон с логотипами и скроллом</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Шапка с логотипами партнеров */
+        .header {
+            background: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .partners {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .partners img {
+            height: 200px;
+            width: auto;
+        }
+
+        /* Основная часть (3 колонки) */
+        .main {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Левая колонка (20%) - навигация */
+        .left {
+            width: 20%;
+            text-align: center;
+            background: #f9f9f9;
+            color: white;
+            padding: 20px;
+            overflow-y: auto; /* Если контента много, можно скроллить */
+        }
+
+        .left ul {
+            list-style: none;
+        }
+
+        .left li {
+            margin-bottom: 50px;
+        }
+
+        .left a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        /* Центральная колонка (60%) - основной контент со скроллом */
+        .center {
+            width: 60%;
+            padding: 20px;
+            overflow-y: auto; /* Скролл только здесь */
+        }
+
+        /* Правая колонка (20%) - маленькие логотипы */
+        .right {
+            width: 20%;
+            background: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            gap: 15px;
+        }
+
+        .right img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<!-- Шапка с логотипами партнеров -->
+<div class="header">
+    <div class="partners">
+        <img src="{% static 'vendor/images/1.jpg' %}" alt="Логотип 1">
+        <img src="{% static 'vendor/images/2.jpg' %}" alt="Логотип 1">
+        <img src="{% static 'vendor/images/3.jpg' %}" alt="Логотип 1">
+        <img src="{% static 'vendor/images/4.jpg' %}" alt="Логотип 1">
+    </div>
+</div>
+
+<!-- Основная часть -->
+<div class="main">
+    <!-- Левая колонка (навигация) -->
+    <div class="left">
+        <ul>
+            <li><a href="{% url 'aplication:home' %}">Bosh sahifa</a></li>
+            <li><a href="#">Haqida</a></li>
+            <li><a href="#">Faoliyat</a></li>
+            <li><a href="#">Afzalliklar</a></li>
+            <li><a href="{% url 'aplication:public' %}">Xalqaro jurnal</a></li>
+        </ul>
+    </div>
+
+    <!-- Центральная колонка (основной контент) -->
+    <div class="center">
+        <h3>{{ public.title }}</h3><br><br>
+        <h4>Annotatsiya.</h4><br>
+        <p style="color: #a6a6a6">{{ public.annotatsiya }}</p><br><br>
+        <h4>Kalit so‘zlar: </h4><br>
+        <p style="color: #a6a6a6">{{ public.keywords }}</p><br><br>
+        <h4>Abstract.</h4><br>
+        <p style="color: #a6a6a6">{{ public.abstract }}</p><br><br>
+        <h4>Keywords:</h4><br>
+        <p style="color: #a6a6a6">{{ public.keywords2 }} <br><br><br><br>
+            {{ public.description|safe }}
+        </p><br><br>
+        <h1>Foydalanilgan adabiyotlar:</h1><br>
+        <p style="color: #a6a6a6">{{ public.source|safe }}
+        </p>
+    </div>
+
+    <!-- Правая колонка (маленькие логотипы) -->
+    <div class="right">
+        <img src="{% static 'vendor/images/a.png' %}" alt="Лого A">
+        <img src="{% static 'vendor/images/b.png' %}" alt="Лого A">
+        <img src="{% static 'vendor/images/c.png' %}" alt="Лого A">
+    </div>
+</div>
+</body>
+</html>

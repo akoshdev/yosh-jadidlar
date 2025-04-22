@@ -65,3 +65,14 @@ def news_detail(request, id):
     }
 
     return render(request, 'aplication/news-detail.html', context)
+
+def nashriyot(request):
+    # category = ProductCategory.objects.get(id=id)
+    public = Publisher.objects.first()
+    # product = get_object_or_404(Product, pid=pid)
+
+    context = {
+        "public":public,
+    }
+
+    return render(request, 'aplication/nashriyot.html', context)
