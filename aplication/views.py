@@ -56,9 +56,7 @@ def forum_detail(request, id):
     return render(request, 'aplication/forum-detail.html', context)
 
 def news_detail(request, id):
-    # category = ProductCategory.objects.get(id=id)
     new = News.objects.get(id=id)
-    # product = get_object_or_404(Product, pid=pid)
 
     context = {
         "new":new,
@@ -67,12 +65,22 @@ def news_detail(request, id):
     return render(request, 'aplication/news-detail.html', context)
 
 def nashriyot(request):
-    # category = ProductCategory.objects.get(id=id)
     public = Publisher.objects.first()
-    # product = get_object_or_404(Product, pid=pid)
 
     context = {
         "public":public,
     }
 
     return render(request, 'aplication/nashriyot.html', context)
+
+def nashriyot_haqida(request):
+
+    return render(request, 'aplication/nashriyot-haqida.html')
+
+def nashriyot_faoliyati(request):
+
+    return render(request, 'aplication/nashriyot-faoliyati.html')
+
+def nashriyot_afzalliklari(request):
+
+    return render(request, 'aplication/nashriyot-afzalliklari.html')
